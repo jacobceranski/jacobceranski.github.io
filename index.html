@@ -8,14 +8,13 @@
 
   <meta name="description" content="Jacob Ceranski — Aspiring SOC Analyst. Technical Support Specialist (USAF National Guard). CompTIA Security+ certified." />
   <meta property="og:title" content="Jacob Ceranski | Aspiring SOC Analyst" />
-  <meta property="og:description" content="About, Experience, Education, Certifications, Honors & Awards, and Contact." />
+  <meta property="og:description" content="About, Experience, Education, Certifications, Honors & Awards, Skills/Tools, and Contact." />
   <meta property="og:type" content="website" />
 
   <style>
     :root{
       --bg: #0b0f14;
       --panel: rgba(15, 22, 32, 0.92);
-      --panel2: rgba(11, 15, 20, 0.55);
       --border: #223044;
       --text: #d7e1ee;
       --muted: #9aa9bd;
@@ -55,6 +54,7 @@
       margin-bottom: 14px;
       color: var(--muted);
       font-size: 13px;
+      flex-wrap: wrap;
     }
 
     .pill{
@@ -113,8 +113,8 @@
     }
 
     .avatar{
-      width: 96px;
-      height: 96px;
+      width: 104px;
+      height: 104px;
       border-radius: 16px;
       object-fit: cover;
       border: 1px solid rgba(34,48,68,0.9);
@@ -210,7 +210,7 @@
 
     @media (min-width: 860px){
       .grid{ grid-template-columns: 1fr 1fr; }
-      .avatar{ width: 108px; height: 108px; }
+      .avatar{ width: 118px; height: 118px; }
     }
   </style>
 </head>
@@ -218,9 +218,9 @@
 <body>
   <div class="wrap">
     <div class="topbar">
-      <div class="pill">portfolio: <span class="muted">jacobceranski.github.io</span></div>
-      <div class="pill">focus: <span class="muted">SOC / cyber defense</span></div>
-      <div class="pill">cert: <span class="muted">CompTIA Security+</span></div>
+      <div class="pill">Aspiring SOC Analyst</div>
+      <div class="pill">CompTIA Security+ (Jun 2026 – Jun 2029)</div>
+      <div class="pill">USAF Air National Guard • Cyber Defense Ops (1D7X1)</div>
     </div>
 
     <div class="terminal">
@@ -237,6 +237,7 @@
         <div><span class="prompt">jacob@ceranski:~$</span> whoami</div>
 
         <div class="hero">
+          <!-- If your image still doesn’t show: rename it to portrait.jpg and change src="portrait.jpg" -->
           <img class="avatar" src="GRADUATION%20PORTRAIT.jpg" alt="Portrait of Jacob Ceranski" />
           <div>
             <h1>Jacob Ceranski</h1>
@@ -253,6 +254,7 @@
               <li><a href="#education">Education</a></li>
               <li><a href="#certifications">Certifications</a></li>
               <li><a href="#honors">Honors & Awards</a></li>
+              <li><a href="#skills">Skills & Tools</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
 
@@ -266,7 +268,6 @@
           </div>
         </div>
 
-        <!-- ABOUT -->
         <div class="section" id="about">
           <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat about.txt</div>
           <h2>About</h2>
@@ -281,7 +282,6 @@
           </div>
         </div>
 
-        <!-- EXPERIENCE -->
         <div class="section" id="experience">
           <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat experience.md</div>
           <h2>Experience</h2>
@@ -292,9 +292,11 @@
               <span class="meta">United States Air Force (Contract) • Jul 2025 – Present</span>
             </div>
             <div class="meta">107th Attack Wing • On-site</div>
+
             <p class="meta" style="margin:10px 0 0;">
-              Enlisted in the United States Air Force (Air National Guard) as a Cyber Defense Operations Specialist (AFSC 1D7X1). As a Technical Support Specialist, I ensure the security of critical digital infrastructure while providing essential technical support to personnel. I integrate strict DoD information assurance standards into daily operations, managing endpoint configuration, provisioning devices, and maintaining a high level of situational awareness within the cybersecurity landscape.
+              Enlisted in the United States Air Force (Air National Guard) as a Cyber Defense Operations Specialist (AFSC 1D7X1). As a Technical Support Specialist, I ensure the security of critical digital infrastructure while providing essential technical support to personnel. I integrate strict DoD information assurance standards into daily operations, managing endpoint configuration, provisioning devices, and maintaining situational awareness within the cybersecurity landscape.
             </p>
+
             <ul>
               <li>Managed and resolved high-volume technical issues using a ticketing system to maintain mission readiness.</li>
               <li>Provided end-user support and troubleshooting across hardware, software, and network anomalies while maintaining operational security.</li>
@@ -302,7 +304,6 @@
           </div>
         </div>
 
-        <!-- EDUCATION -->
         <div class="section" id="education">
           <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat education.json</div>
           <h2>Education</h2>
@@ -320,7 +321,6 @@
           </div>
         </div>
 
-        <!-- CERTIFICATIONS -->
         <div class="section" id="certifications">
           <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat certifications.json</div>
           <h2>Certifications</h2>
@@ -331,16 +331,17 @@
               <div class="meta">CompTIA</div>
               <div class="meta">Issued Jun 2026 • Expires Jun 2029</div>
             </div>
+
             <div class="card">
-              <div class="meta"><strong>Credential link</strong></div>
-              <div class="meta">
-                If you want, open the “Show credential” button on LinkedIn, copy the URL, and paste it here later.
-              </div>
+              <strong>Next certifications</strong>
+              <ul>
+                <li>CompTIA CySA+</li>
+                <li>Cisco CCNA</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <!-- HONORS -->
         <div class="section" id="honors">
           <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat honors_and_awards.md</div>
           <h2>Honors & Awards</h2>
@@ -354,15 +355,41 @@
           </div>
         </div>
 
-        <!-- CONTACT -->
+        <div class="section" id="skills">
+          <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat skills_and_tools.txt</div>
+          <h2>Skills & Tools</h2>
+
+          <div class="grid">
+            <div class="card">
+              <strong>Security fundamentals</strong>
+              <ul>
+                <li>Security+, access control, authentication/authorization, least privilege</li>
+                <li>Networking fundamentals (DNS, HTTP/S, ports/protocols)</li>
+                <li>Incident response basics (triage, containment, documentation)</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <strong>Security tools (core categories)</strong>
+              <ul>
+                <li>SIEM (Security Information and Event Management)</li>
+                <li>EDR (Endpoint Detection & Response)</li>
+                <li>Log analysis & alert triage</li>
+                <li>Vulnerability management</li>
+                <li>Ticketing systems & incident documentation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <div class="section" id="contact">
           <div class="muted"><span class="prompt">jacob@ceranski:~$</span> open contact</div>
           <h2>Contact</h2>
 
           <div class="card">
             <ul style="margin-top:0;">
-              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jacobceranski" target="_blank" rel="noreferrer">linkedin.com/in/jacobceranski</a></li>
               <li><strong>Email:</strong> <a href="mailto:jacobceranski@gmail.com">jacobceranski@gmail.com</a></li>
+              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jacobceranski" target="_blank" rel="noreferrer">linkedin.com/in/jacobceranski</a></li>
               <li><strong>Resume:</strong> <a href="Resume%20-%20Jacob%20Ceranski.pdf" target="_blank" rel="noreferrer">Resume - Jacob Ceranski (PDF)</a></li>
             </ul>
           </div>
@@ -372,7 +399,6 @@
           <div><span class="prompt">jacob@ceranski:~$</span> exit</div>
           <div class="muted">Last updated: <span id="lastUpdated"></span></div>
         </div>
-
       </div>
     </div>
   </div>
