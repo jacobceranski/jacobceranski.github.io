@@ -3,42 +3,433 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Jacob Ceranski | SOC Analyst</title>
+  <meta name="description" content="Jacob Ceranski — Aspiring SOC Analyst. Security+, blue team learning projects, certifications, skills, and contact." />
+  <meta property="og:title" content="Jacob Ceranski | SOC Analyst Portfolio" />
+  <meta property="og:description" content="Terminal-style portfolio: About, Experience, Certifications (Security+), Projects, Skills, Contact." />
+  <meta property="og:type" content="website" />
+  <title>Jacob Ceranski | SOC Analyst Portfolio</title>
+
   <style>
-    body { margin:0; background:#0b0f14; color:#d6deeb; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 48px 20px; }
-    .term { background:#0f1620; border:1px solid #233042; border-radius:12px; padding:18px; }
-    .prompt { color:#7fdbca; }
-    a { color:#7aa2f7; }
-    .dim { color:#7b8794; }
-    ul { margin: 10px 0 0 18px; }
+    :root{
+      --bg: #0b0f14;
+      --panel: rgba(15, 22, 32, 0.92);
+      --border: #223044;
+      --text: #d7e1ee;
+      --muted: #9aa9bd;
+      --prompt: #7fdbca;
+      --accent: #7aa2f7;
+      --warn: #ffd166;
+      --good: #64f58d;
+      --shadow: rgba(0,0,0,0.35);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      background:
+        radial-gradient(1100px 600px at 20% -10%, rgba(122,162,247,0.15), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(127,219,202,0.12), transparent 55%),
+        radial-gradient(900px 500px at 50% 120%, rgba(255,209,102,0.10), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      line-height: 1.55;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 42px 18px 72px;
+    }
+
+    .topbar{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .pill{
+      border: 1px solid var(--border);
+      background: rgba(15,22,32,0.55);
+      padding: 6px 10px;
+      border-radius: 999px;
+      box-shadow: 0 8px 24px var(--shadow);
+      white-space: nowrap;
+    }
+
+    .terminal{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 18px 60px var(--shadow);
+      overflow: hidden;
+    }
+
+    .terminal-header{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(11, 15, 20, 0.65);
+    }
+
+    .dots{ display: flex; gap: 7px; }
+    .dot{ width: 10px; height: 10px; border-radius: 50%; }
+    .dot.red{ background:#ff5f56; }
+    .dot.yellow{ background:#ffbd2e; }
+    .dot.green{ background:#27c93f; }
+
+    .terminal-title{
+      margin-left: 6px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.2px;
+    }
+
+    .terminal-body{ padding: 18px 18px 22px; }
+
+    .prompt{ color: var(--prompt); }
+    .muted{ color: var(--muted); }
+
+    h1{
+      margin: 10px 0 6px;
+      font-size: 34px;
+      letter-spacing: 0.2px;
+    }
+
+    .subtitle{
+      margin: 0 0 14px;
+      color: var(--text);
+    }
+
+    .nav{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin: 12px 0 18px;
+      padding-left: 18px;
+    }
+
+    .nav li{ color: var(--muted); }
+    .nav a{ color: var(--accent); }
+
+    .section{
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px dashed rgba(34,48,68,0.85);
+    }
+
+    h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    ul{ margin: 8px 0 0 18px; }
+    li{ margin: 6px 0; }
+
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .card{
+      border: 1px solid rgba(34,48,68,0.8);
+      background: rgba(11,15,20,0.45);
+      border-radius: 12px;
+      padding: 12px 12px;
+    }
+
+    .badge{
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(34,48,68,0.9);
+      background: rgba(15,22,32,0.6);
+      color: var(--muted);
+      font-size: 12px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .status-good{ color: var(--good); }
+    .status-warn{ color: var(--warn); }
+
+    .kvs{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .kv{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .k{ color: var(--muted); min-width: 120px; }
+    .v{ color: var(--text); }
+
+    .footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* larger screens */
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+      .kvs{ grid-template-columns: 1fr 1fr; }
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
-    <div class="term">
-      <div><span class="prompt">jacob@ceranski:~$</span> whoami</div>
-      <h1>Jacob Ceranski</h1>
-      <p>SOC Analyst (Aspiring) | Threat Detection | Incident Response</p>
+    <div class="topbar">
+      <div class="pill">status: <span class="status-good">online</span></div>
+      <div class="pill">theme: dark-classic terminal</div>
+      <div class="pill">role: SOC Analyst (aspiring)</div>
+    </div>
 
-      <div class="dim"><span class="prompt">jacob@ceranski:~$</span> ls</div>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/jacobceranski" target="_blank">linkedin</a></li>
-        <li>certifications</li>
-        <li>projects</li>
-        <li>contact</li>
-      </ul>
+    <div class="terminal">
+      <div class="terminal-header">
+        <div class="dots">
+          <div class="dot red"></div>
+          <div class="dot yellow"></div>
+          <div class="dot green"></div>
+        </div>
+        <div class="terminal-title">jacob@ceranski:~ — portfolio</div>
+      </div>
 
-      <h2>Certifications</h2>
-      <ul>
-        <li>CompTIA Security+</li>
-      </ul>
+      <div class="terminal-body">
+        <div><span class="prompt">jacob@ceranski:~$</span> whoami</div>
+        <h1>Jacob Ceranski</h1>
+        <p class="subtitle">Aspiring SOC Analyst | CompTIA Security+ | Threat Detection • Triage • Incident Response (Learning)</p>
 
-      <h2>Contact</h2>
-      <ul>
-        <li>Email: <a href="mailto:jacobceranski@gmail.com">jacobceranski@gmail.com</a></li>
-      </ul>
+        <div class="muted"><span class="prompt">jacob@ceranski:~$</span> ls</div>
+        <ul class="nav">
+          <li><a href="#about">about</a></li>
+          <li><a href="#experience">experience</a></li>
+          <li><a href="#certifications">certifications</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+
+        <!-- ABOUT -->
+        <div class="section" id="about">
+          <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat about.txt</div>
+          <h2>About</h2>
+          <div class="card">
+            <p style="margin:0;">
+              I’m building toward a SOC Analyst role by combining Security+ fundamentals with hands-on lab practice.
+              My focus is learning how to interpret logs, triage alerts, document investigations, and communicate findings clearly.
+            </p>
+            <div class="kvs">
+              <div class="kv"><span class="k">Focus:</span><span class="v">Blue team fundamentals</span></div>
+              <div class="kv"><span class="k">Strength:</span><span class="v">Documentation + repeatable process</span></div>
+              <div class="kv"><span class="k">Current goal:</span><span class="v">Build a home-lab SOC and publish write-ups</span></div>
+              <div class="kv"><span class="k">Cert baseline:</span><span class="v">CompTIA Security+</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE (LinkedIn-like, but safe placeholders) -->
+        <div class="section" id="experience">
+          <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat experience.md</div>
+          <h2>Experience</h2>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              <strong>Experience pulled from LinkedIn</strong>
+              <span class="badge status-warn">add details</span>
+            </p>
+            <p class="muted" style="margin:0 0 8px;">
+              Replace the placeholders below with your exact roles/titles/dates from LinkedIn when you’re ready.
+            </p>
+            <ul style="margin-top:0;">
+              <li><strong>[Your Job Title]</strong> — [Company] <span class="muted">([Start] – [End])</span></li>
+              <li><strong>[Your Job Title]</strong> — [Company] <span class="muted">([Start] – [End])</span></li>
+              <li><strong>Relevant Coursework / Training</strong> — Security+, labs, self-study <span class="muted">(ongoing)</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="section" id="certifications">
+          <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat certifications.json</div>
+          <h2>Certifications</h2>
+
+          <div class="grid">
+            <div class="card">
+              <p style="margin:0 0 8px;">
+                <strong>CompTIA Security+</strong>
+                <span class="badge status-good">verified baseline</span>
+              </p>
+              <div class="kvs">
+                <div class="kv"><span class="k">Issuer:</span><span class="v">CompTIA</span></div>
+                <div class="kv"><span class="k">Status:</span><span class="v">Completed</span></div>
+                <div class="kv"><span class="k">Credential:</span><span class="v muted">Add verification link when available</span></div>
+                <div class="kv"><span class="k">Notes:</span><span class="v">Core security fundamentals for SOC</span></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <p style="margin:0 0 8px;">
+                <strong>Next certifications (planned)</strong>
+                <span class="badge status-warn">optional</span>
+              </p>
+              <ul style="margin-top:0;">
+                <li class="muted">Add only what you genuinely plan to pursue (e.g., CySA+, SC-200, Network+).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECTS (honest “in progress” projects) -->
+        <div class="section" id="projects">
+          <div class="muted"><span class="prompt">jacob@ceranski:~$</span> ls projects/</div>
+          <h2>Projects</h2>
+
+          <div class="grid">
+            <div class="card">
+              <p style="margin:0 0 8px;">
+                <strong>Home Lab SOC (in progress)</strong>
+                <span class="badge status-warn">learning build</span>
+              </p>
+              <ul style="margin-top:0;">
+                <li>Goal: practice alert triage + investigation workflows</li>
+                <li>Deliverables: screenshots + steps + “what I learned” write-up</li>
+                <li class="muted">Tools: start simple; list actual tools after you use them</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <p style="margin:0 0 8px;">
+                <strong>Phishing Triage Checklist</strong>
+                <span class="badge status-warn">write-up</span>
+              </p>
+              <ul style="margin-top:0;">
+                <li>Header review, sender validation, link analysis</li>
+                <li>Decision points: malicious vs suspicious vs benign</li>
+                <li>Deliverable: a repeatable checklist + example case</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <p style="margin:0 0 8px;">
+                <strong>Incident Response Notes (starter playbooks)</strong>
+                <span class="badge status-warn">process</span>
+              </p>
+              <ul style="margin-top:0;">
+                <li>Basic steps: identify → contain → eradicate → recover</li>
+                <li>Evidence collection checklist (safe + non-sensitive)</li>
+                <li>Deliverable: PDF/Markdown “playbook” on GitHub</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <p style="margin:0 0 8px;">
+                <strong>Detection Engineering Practice (Sigma starter)</strong>
+                <span class="badge status-warn">learning</span>
+              </p>
+              <ul style="margin-top:0;">
+                <li>Write 3–5 Sigma rules based on common TTPs</li>
+                <li>Map each rule to MITRE ATT&CK</li>
+                <li>Deliverable: small GitHub repo + README</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="footer">
+            Note: Projects are intentionally framed as “learning builds” until you have real-world experience.
+            That’s normal for entry SOC paths—what matters is documentation + consistency.
+          </p>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="section" id="skills">
+          <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat skills.txt</div>
+          <h2>Skills</h2>
+
+          <div class="grid">
+            <div class="card">
+              <p style="margin:0 0 8px;"><strong>Security fundamentals</strong></p>
+              <ul style="margin-top:0;">
+                <li>Security concepts (CIA triad, authn/authz, least privilege)</li>
+                <li>Common attack types (phishing, malware, credential abuse)</li>
+                <li>Basic networking concepts (DNS, HTTP/S, ports)</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <p style="margin:0 0 8px;"><strong>Blue team workflow (learning)</strong></p>
+              <ul style="margin-top:0;">
+                <li>Alert triage and prioritization</li>
+                <li>Log review mindset (what happened, when, and why)</li>
+                <li>Writing clear investigation notes and summaries</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <p style="margin:0 0 8px;"><strong>Operating systems</strong></p>
+              <ul style="margin-top:0;">
+                <li>Windows basics (accounts, permissions, event logs)</li>
+                <li>Linux basics (files, permissions, processes)</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <p style="margin:0 0 8px;"><strong>Tools (add as you learn)</strong> <span class="badge status-warn">TBD</span></p>
+              <ul style="margin-top:0;">
+                <li class="muted">Add tools only after you’ve used them in a lab (SIEM/EDR, etc.).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="section" id="contact">
+          <div class="muted"><span class="prompt">jacob@ceranski:~$</span> open contact</div>
+          <h2>Contact</h2>
+
+          <div class="card">
+            <ul style="margin-top:0;">
+              <li><strong>Email:</strong> <a href="mailto:jacobceranski@gmail.com">jacobceranski@gmail.com</a></li>
+              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jacobceranski" target="_blank" rel="noreferrer">linkedin.com/in/jacobceranski</a></li>
+              <li><strong>GitHub:</strong> <a href="https://github.com/jacobceranski" target="_blank" rel="noreferrer">github.com/jacobceranski</a></li>
+            </ul>
+            <p class="muted" style="margin:10px 0 0;">
+              Tip: If you prefer not to show your email publicly, remove the email line and use LinkedIn only.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div><span class="prompt">jacob@ceranski:~$</span> exit</div>
+          <div class="muted">Built with GitHub Pages • Terminal theme • Last updated: <span id="lastUpdated"></span></div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <script>
+    // Lightweight “last updated” without needing any build tooling
+    const el = document.getElementById('lastUpdated');
+    const d = new Date();
+    const pad = (n) => String(n).padStart(2, '0');
+    el.textContent = `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+  </script>
 </body>
 </html>
