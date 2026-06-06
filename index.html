@@ -3,38 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Jacob Ceranski — Aspiring SOC Analyst. Security+, blue team learning projects, certifications, skills, and contact." />
-  <meta property="og:title" content="Jacob Ceranski | SOC Analyst Portfolio" />
-  <meta property="og:description" content="Terminal-style portfolio: About, Experience, Certifications (Security+), Projects, Skills, Contact." />
+
+  <title>Jacob Ceranski | Aspiring SOC Analyst</title>
+
+  <meta name="description" content="Jacob Ceranski — Aspiring SOC Analyst. Technical Support Specialist (USAF National Guard). CompTIA Security+ certified." />
+  <meta property="og:title" content="Jacob Ceranski | Aspiring SOC Analyst" />
+  <meta property="og:description" content="About, Experience, Education, Certifications, Honors & Awards, and Contact." />
   <meta property="og:type" content="website" />
-  <title>Jacob Ceranski | SOC Analyst Portfolio</title>
 
   <style>
     :root{
       --bg: #0b0f14;
       --panel: rgba(15, 22, 32, 0.92);
+      --panel2: rgba(11, 15, 20, 0.55);
       --border: #223044;
       --text: #d7e1ee;
       --muted: #9aa9bd;
-      --prompt: #7fdbca;
       --accent: #7aa2f7;
-      --warn: #ffd166;
-      --good: #64f58d;
+      --accent2: #7fdbca;
       --shadow: rgba(0,0,0,0.35);
     }
 
     * { box-sizing: border-box; }
     html, body { height: 100%; }
+
     body{
       margin: 0;
       background:
         radial-gradient(1100px 600px at 20% -10%, rgba(122,162,247,0.15), transparent 60%),
-        radial-gradient(900px 500px at 90% 0%, rgba(127,219,202,0.12), transparent 55%),
-        radial-gradient(900px 500px at 50% 120%, rgba(255,209,102,0.10), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(127,219,202,0.10), transparent 55%),
         var(--bg);
       color: var(--text);
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     a { color: var(--accent); text-decoration: none; }
@@ -47,10 +48,10 @@
     }
 
     .topbar{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
       margin-bottom: 14px;
       color: var(--muted);
       font-size: 13px;
@@ -74,16 +75,16 @@
     }
 
     .terminal-header{
-      display: flex;
-      align-items: center;
+      display:flex;
+      align-items:center;
       gap: 10px;
       padding: 12px 14px;
       border-bottom: 1px solid var(--border);
       background: rgba(11, 15, 20, 0.65);
     }
 
-    .dots{ display: flex; gap: 7px; }
-    .dot{ width: 10px; height: 10px; border-radius: 50%; }
+    .dots{ display:flex; gap:7px; }
+    .dot{ width:10px; height:10px; border-radius:50%; }
     .dot.red{ background:#ff5f56; }
     .dot.yellow{ background:#ffbd2e; }
     .dot.green{ background:#27c93f; }
@@ -95,35 +96,75 @@
       letter-spacing: 0.2px;
     }
 
-    .terminal-body{ padding: 18px 18px 22px; }
+    .terminal-body{ padding: 18px 18px 24px; }
 
-    .prompt{ color: var(--prompt); }
+    .prompt{ color: var(--accent2); }
     .muted{ color: var(--muted); }
 
+    .hero{
+      display:flex;
+      gap: 18px;
+      align-items:center;
+      margin: 12px 0 18px;
+      padding: 14px;
+      border: 1px solid rgba(34,48,68,0.8);
+      background: rgba(11,15,20,0.35);
+      border-radius: 14px;
+    }
+
+    .avatar{
+      width: 96px;
+      height: 96px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 1px solid rgba(34,48,68,0.9);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+      background: rgba(15,22,32,0.7);
+      flex: 0 0 auto;
+    }
+
     h1{
-      margin: 10px 0 6px;
-      font-size: 34px;
+      margin: 0 0 6px;
+      font-size: 32px;
       letter-spacing: 0.2px;
     }
 
-    .subtitle{
-      margin: 0 0 14px;
+    .headline{
+      margin: 0;
       color: var(--text);
+      font-size: 14px;
+    }
+
+    .subline{
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 13px;
     }
 
     .nav{
-      display: flex;
+      display:flex;
       flex-wrap: wrap;
-      gap: 10px 14px;
-      margin: 12px 0 18px;
-      padding-left: 18px;
+      gap: 8px;
+      margin: 12px 0 6px;
+      padding: 0;
+      list-style: none;
     }
 
-    .nav li{ color: var(--muted); }
-    .nav a{ color: var(--accent); }
+    .nav a{
+      display:inline-block;
+      border: 1px solid rgba(34,48,68,0.85);
+      background: rgba(15,22,32,0.55);
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--text);
+    }
+    .nav a:hover{
+      text-decoration:none;
+      border-color: rgba(122,162,247,0.8);
+    }
 
     .section{
-      margin-top: 20px;
+      margin-top: 18px;
       padding-top: 18px;
       border-top: 1px dashed rgba(34,48,68,0.85);
     }
@@ -131,54 +172,35 @@
     h2{
       margin: 0 0 10px;
       font-size: 18px;
-      color: var(--text);
-    }
-
-    ul{ margin: 8px 0 0 18px; }
-    li{ margin: 6px 0; }
-
-    .grid{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
     }
 
     .card{
       border: 1px solid rgba(34,48,68,0.8);
-      background: rgba(11,15,20,0.45);
+      background: rgba(11,15,20,0.35);
       border-radius: 12px;
       padding: 12px 12px;
     }
 
-    .badge{
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(34,48,68,0.9);
-      background: rgba(15,22,32,0.6);
-      color: var(--muted);
-      font-size: 12px;
-      margin-left: 8px;
-      vertical-align: middle;
-    }
-
-    .status-good{ color: var(--good); }
-    .status-warn{ color: var(--warn); }
-
-    .kvs{
-      display: grid;
+    .grid{
+      display:grid;
       grid-template-columns: 1fr;
-      gap: 8px;
-      margin-top: 8px;
+      gap: 10px;
     }
 
-    .kv{
-      display: flex;
+    .row{
+      display:flex;
+      justify-content:space-between;
       gap: 10px;
       flex-wrap: wrap;
     }
-    .k{ color: var(--muted); min-width: 120px; }
-    .v{ color: var(--text); }
+
+    .meta{
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    ul{ margin: 8px 0 0 18px; }
+    li{ margin: 6px 0; }
 
     .footer{
       margin-top: 18px;
@@ -186,10 +208,9 @@
       font-size: 12px;
     }
 
-    /* larger screens */
     @media (min-width: 860px){
       .grid{ grid-template-columns: 1fr 1fr; }
-      .kvs{ grid-template-columns: 1fr 1fr; }
+      .avatar{ width: 108px; height: 108px; }
     }
   </style>
 </head>
@@ -197,9 +218,9 @@
 <body>
   <div class="wrap">
     <div class="topbar">
-      <div class="pill">status: <span class="status-good">online</span></div>
-      <div class="pill">theme: dark-classic terminal</div>
-      <div class="pill">role: SOC Analyst (aspiring)</div>
+      <div class="pill">portfolio: <span class="muted">jacobceranski.github.io</span></div>
+      <div class="pill">focus: <span class="muted">SOC / cyber defense</span></div>
+      <div class="pill">cert: <span class="muted">CompTIA Security+</span></div>
     </div>
 
     <div class="terminal">
@@ -209,23 +230,41 @@
           <div class="dot yellow"></div>
           <div class="dot green"></div>
         </div>
-        <div class="terminal-title">jacob@ceranski:~ — portfolio</div>
+        <div class="terminal-title">jacob@ceranski:~ — public profile</div>
       </div>
 
       <div class="terminal-body">
         <div><span class="prompt">jacob@ceranski:~$</span> whoami</div>
-        <h1>Jacob Ceranski</h1>
-        <p class="subtitle">Aspiring SOC Analyst | CompTIA Security+ | Threat Detection • Triage • Incident Response (Learning)</p>
 
-        <div class="muted"><span class="prompt">jacob@ceranski:~$</span> ls</div>
-        <ul class="nav">
-          <li><a href="#about">about</a></li>
-          <li><a href="#experience">experience</a></li>
-          <li><a href="#certifications">certifications</a></li>
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#skills">skills</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
+        <div class="hero">
+          <img class="avatar" src="GRADUATION%20PORTRAIT.jpg" alt="Portrait of Jacob Ceranski" />
+          <div>
+            <h1>Jacob Ceranski</h1>
+            <p class="headline">
+              Aspiring SOC Analyst • Technical Support Specialist (USAF National Guard) • CompTIA Security+
+            </p>
+            <p class="subline">
+              East Amherst, New York, United States • 500+ connections
+            </p>
+
+            <ul class="nav" aria-label="Quick navigation">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#honors">Honors & Awards</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <p class="subline">
+              <a href="https://www.linkedin.com/in/jacobceranski" target="_blank" rel="noreferrer">LinkedIn</a>
+              &nbsp;•&nbsp;
+              <a href="mailto:jacobceranski@gmail.com">Email</a>
+              &nbsp;•&nbsp;
+              <a href="Resume%20-%20Jacob%20Ceranski.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+            </p>
+          </div>
+        </div>
 
         <!-- ABOUT -->
         <div class="section" id="about">
@@ -233,36 +272,51 @@
           <h2>About</h2>
           <div class="card">
             <p style="margin:0;">
-              I’m building toward a SOC Analyst role by combining Security+ fundamentals with hands-on lab practice.
-              My focus is learning how to interpret logs, triage alerts, document investigations, and communicate findings clearly.
+              Hello everyone! I am Jacob Ceranski, a University at Buffalo School of Management undergraduate student majoring in Information Technology and Management. Apart from academics, I also serve in the United States Air National Guard as a Technical Support Specialist. CompTIA Security+ Certified!
+              <br><br>
+              Outside of school, I work in the hospitality industry at Falleta's, a high-end Italian restaurant, where I've honed my teamwork, communication, and adaptability under high-pressure situations.
+              <br><br>
+              I'm excited to apply my background in IT, management, and cyber operations to opportunities where I can grow, contribute, and help organizations deliver results.
             </p>
-            <div class="kvs">
-              <div class="kv"><span class="k">Focus:</span><span class="v">Blue team fundamentals</span></div>
-              <div class="kv"><span class="k">Strength:</span><span class="v">Documentation + repeatable process</span></div>
-              <div class="kv"><span class="k">Current goal:</span><span class="v">Build a home-lab SOC and publish write-ups</span></div>
-              <div class="kv"><span class="k">Cert baseline:</span><span class="v">CompTIA Security+</span></div>
-            </div>
           </div>
         </div>
 
-        <!-- EXPERIENCE (LinkedIn-like, but safe placeholders) -->
+        <!-- EXPERIENCE -->
         <div class="section" id="experience">
           <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat experience.md</div>
           <h2>Experience</h2>
 
           <div class="card">
-            <p style="margin:0 0 6px;">
-              <strong>Experience pulled from LinkedIn</strong>
-              <span class="badge status-warn">add details</span>
+            <div class="row">
+              <strong>Technical Support Specialist</strong>
+              <span class="meta">United States Air Force (Contract) • Jul 2025 – Present</span>
+            </div>
+            <div class="meta">107th Attack Wing • On-site</div>
+            <p class="meta" style="margin:10px 0 0;">
+              Enlisted in the United States Air Force (Air National Guard) as a Cyber Defense Operations Specialist (AFSC 1D7X1). As a Technical Support Specialist, I ensure the security of critical digital infrastructure while providing essential technical support to personnel. I integrate strict DoD information assurance standards into daily operations, managing endpoint configuration, provisioning devices, and maintaining a high level of situational awareness within the cybersecurity landscape.
             </p>
-            <p class="muted" style="margin:0 0 8px;">
-              Replace the placeholders below with your exact roles/titles/dates from LinkedIn when you’re ready.
-            </p>
-            <ul style="margin-top:0;">
-              <li><strong>[Your Job Title]</strong> — [Company] <span class="muted">([Start] – [End])</span></li>
-              <li><strong>[Your Job Title]</strong> — [Company] <span class="muted">([Start] – [End])</span></li>
-              <li><strong>Relevant Coursework / Training</strong> — Security+, labs, self-study <span class="muted">(ongoing)</span></li>
+            <ul>
+              <li>Managed and resolved high-volume technical issues using a ticketing system to maintain mission readiness.</li>
+              <li>Provided end-user support and troubleshooting across hardware, software, and network anomalies while maintaining operational security.</li>
             </ul>
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section" id="education">
+          <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat education.json</div>
+          <h2>Education</h2>
+
+          <div class="card">
+            <div class="row">
+              <strong>University at Buffalo</strong>
+              <span class="meta">2023 – 2028</span>
+            </div>
+            <div class="meta">Bachelor of Science (BS) — Computer/Information Technology Administration and Management</div>
+            <div class="meta">Grade: Junior</div>
+            <p class="meta" style="margin:10px 0 0;">
+              Activities and societies: National Student Data Corps at UB • Association for Computing Machinery • Pi-Rho Zeta Chapter of Lambda Chi Alpha
+            </p>
           </div>
         </div>
 
@@ -273,129 +327,30 @@
 
           <div class="grid">
             <div class="card">
-              <p style="margin:0 0 8px;">
-                <strong>CompTIA Security+</strong>
-                <span class="badge status-good">verified baseline</span>
-              </p>
-              <div class="kvs">
-                <div class="kv"><span class="k">Issuer:</span><span class="v">CompTIA</span></div>
-                <div class="kv"><span class="k">Status:</span><span class="v">Completed</span></div>
-                <div class="kv"><span class="k">Credential:</span><span class="v muted">Add verification link when available</span></div>
-                <div class="kv"><span class="k">Notes:</span><span class="v">Core security fundamentals for SOC</span></div>
+              <strong>CompTIA Security+ ce Certification</strong>
+              <div class="meta">CompTIA</div>
+              <div class="meta">Issued Jun 2026 • Expires Jun 2029</div>
+            </div>
+            <div class="card">
+              <div class="meta"><strong>Credential link</strong></div>
+              <div class="meta">
+                If you want, open the “Show credential” button on LinkedIn, copy the URL, and paste it here later.
               </div>
             </div>
-
-            <div class="card">
-              <p style="margin:0 0 8px;">
-                <strong>Next certifications (planned)</strong>
-                <span class="badge status-warn">optional</span>
-              </p>
-              <ul style="margin-top:0;">
-                <li class="muted">Add only what you genuinely plan to pursue (e.g., CySA+, SC-200, Network+).</li>
-              </ul>
-            </div>
           </div>
         </div>
 
-        <!-- PROJECTS (honest “in progress” projects) -->
-        <div class="section" id="projects">
-          <div class="muted"><span class="prompt">jacob@ceranski:~$</span> ls projects/</div>
-          <h2>Projects</h2>
+        <!-- HONORS -->
+        <div class="section" id="honors">
+          <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat honors_and_awards.md</div>
+          <h2>Honors & Awards</h2>
 
-          <div class="grid">
-            <div class="card">
-              <p style="margin:0 0 8px;">
-                <strong>Home Lab SOC (in progress)</strong>
-                <span class="badge status-warn">learning build</span>
-              </p>
-              <ul style="margin-top:0;">
-                <li>Goal: practice alert triage + investigation workflows</li>
-                <li>Deliverables: screenshots + steps + “what I learned” write-up</li>
-                <li class="muted">Tools: start simple; list actual tools after you use them</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <p style="margin:0 0 8px;">
-                <strong>Phishing Triage Checklist</strong>
-                <span class="badge status-warn">write-up</span>
-              </p>
-              <ul style="margin-top:0;">
-                <li>Header review, sender validation, link analysis</li>
-                <li>Decision points: malicious vs suspicious vs benign</li>
-                <li>Deliverable: a repeatable checklist + example case</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <p style="margin:0 0 8px;">
-                <strong>Incident Response Notes (starter playbooks)</strong>
-                <span class="badge status-warn">process</span>
-              </p>
-              <ul style="margin-top:0;">
-                <li>Basic steps: identify → contain → eradicate → recover</li>
-                <li>Evidence collection checklist (safe + non-sensitive)</li>
-                <li>Deliverable: PDF/Markdown “playbook” on GitHub</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <p style="margin:0 0 8px;">
-                <strong>Detection Engineering Practice (Sigma starter)</strong>
-                <span class="badge status-warn">learning</span>
-              </p>
-              <ul style="margin-top:0;">
-                <li>Write 3–5 Sigma rules based on common TTPs</li>
-                <li>Map each rule to MITRE ATT&CK</li>
-                <li>Deliverable: small GitHub repo + README</li>
-              </ul>
-            </div>
-          </div>
-
-          <p class="footer">
-            Note: Projects are intentionally framed as “learning builds” until you have real-world experience.
-            That’s normal for entry SOC paths—what matters is documentation + consistency.
-          </p>
-        </div>
-
-        <!-- SKILLS -->
-        <div class="section" id="skills">
-          <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat skills.txt</div>
-          <h2>Skills</h2>
-
-          <div class="grid">
-            <div class="card">
-              <p style="margin:0 0 8px;"><strong>Security fundamentals</strong></p>
-              <ul style="margin-top:0;">
-                <li>Security concepts (CIA triad, authn/authz, least privilege)</li>
-                <li>Common attack types (phishing, malware, credential abuse)</li>
-                <li>Basic networking concepts (DNS, HTTP/S, ports)</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <p style="margin:0 0 8px;"><strong>Blue team workflow (learning)</strong></p>
-              <ul style="margin-top:0;">
-                <li>Alert triage and prioritization</li>
-                <li>Log review mindset (what happened, when, and why)</li>
-                <li>Writing clear investigation notes and summaries</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <p style="margin:0 0 8px;"><strong>Operating systems</strong></p>
-              <ul style="margin-top:0;">
-                <li>Windows basics (accounts, permissions, event logs)</li>
-                <li>Linux basics (files, permissions, processes)</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <p style="margin:0 0 8px;"><strong>Tools (add as you learn)</strong> <span class="badge status-warn">TBD</span></p>
-              <ul style="margin-top:0;">
-                <li class="muted">Add tools only after you’ve used them in a lab (SIEM/EDR, etc.).</li>
-              </ul>
-            </div>
+          <div class="card">
+            <ul style="margin-top:0;">
+              <li><strong>The University of Buffalo Deans List</strong> — May 2025</li>
+              <li><strong>The University of Buffalo Deans List</strong> — Dec 2024</li>
+              <li><strong>The University of Buffalo Deans List</strong> — Dec 2023</li>
+            </ul>
           </div>
         </div>
 
@@ -406,26 +361,23 @@
 
           <div class="card">
             <ul style="margin-top:0;">
-              <li><strong>Email:</strong> <a href="mailto:jacobceranski@gmail.com">jacobceranski@gmail.com</a></li>
               <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jacobceranski" target="_blank" rel="noreferrer">linkedin.com/in/jacobceranski</a></li>
-              <li><strong>GitHub:</strong> <a href="https://github.com/jacobceranski" target="_blank" rel="noreferrer">github.com/jacobceranski</a></li>
+              <li><strong>Email:</strong> <a href="mailto:jacobceranski@gmail.com">jacobceranski@gmail.com</a></li>
+              <li><strong>Resume:</strong> <a href="Resume%20-%20Jacob%20Ceranski.pdf" target="_blank" rel="noreferrer">Resume - Jacob Ceranski (PDF)</a></li>
             </ul>
-            <p class="muted" style="margin:10px 0 0;">
-              Tip: If you prefer not to show your email publicly, remove the email line and use LinkedIn only.
-            </p>
           </div>
         </div>
 
         <div class="footer">
           <div><span class="prompt">jacob@ceranski:~$</span> exit</div>
-          <div class="muted">Built with GitHub Pages • Terminal theme • Last updated: <span id="lastUpdated"></span></div>
+          <div class="muted">Last updated: <span id="lastUpdated"></span></div>
         </div>
+
       </div>
     </div>
   </div>
 
   <script>
-    // Lightweight “last updated” without needing any build tooling
     const el = document.getElementById('lastUpdated');
     const d = new Date();
     const pad = (n) => String(n).padStart(2, '0');
