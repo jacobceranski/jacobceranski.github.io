@@ -8,7 +8,7 @@
 
   <meta name="description" content="Jacob Ceranski — Aspiring SOC Analyst. Technical Support Specialist (USAF National Guard). CompTIA Security+ certified." />
   <meta property="og:title" content="Jacob Ceranski | Aspiring SOC Analyst" />
-  <meta property="og:description" content="About, Experience, Education, Certifications, Honors & Awards, Skills/Tools, and Contact." />
+  <meta property="og:description" content="About, Cyber & IT Experience, Education, Organizations, Certifications, Honors & Awards, Skills/Tools, and Contact." />
   <meta property="og:type" content="website" />
 
   <style>
@@ -21,6 +21,8 @@
       --accent: #7aa2f7;
       --accent2: #7fdbca;
       --shadow: rgba(0,0,0,0.35);
+      --btn: rgba(15,22,32,0.55);
+      --btnBorder: rgba(34,48,68,0.85);
     }
 
     * { box-sizing: border-box; }
@@ -113,8 +115,8 @@
     }
 
     .avatar{
-      width: 104px;
-      height: 104px;
+      width: 110px;
+      height: 110px;
       border-radius: 16px;
       object-fit: cover;
       border: 1px solid rgba(34,48,68,0.9);
@@ -152,13 +154,30 @@
 
     .nav a{
       display:inline-block;
-      border: 1px solid rgba(34,48,68,0.85);
-      background: rgba(15,22,32,0.55);
+      border: 1px solid var(--btnBorder);
+      background: var(--btn);
       padding: 6px 10px;
       border-radius: 999px;
       color: var(--text);
     }
     .nav a:hover{
+      text-decoration:none;
+      border-color: rgba(122,162,247,0.8);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      border: 1px solid var(--btnBorder);
+      background: var(--btn);
+      padding: 7px 10px;
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1;
+    }
+    .btn:hover{
       text-decoration:none;
       border-color: rgba(122,162,247,0.8);
     }
@@ -192,6 +211,7 @@
       justify-content:space-between;
       gap: 10px;
       flex-wrap: wrap;
+      align-items: baseline;
     }
 
     .meta{
@@ -208,9 +228,41 @@
       font-size: 12px;
     }
 
+    /* Logo/Icon sizing (kept proportional everywhere) */
+    .logo{
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      vertical-align: -3px;
+      margin-right: 8px;
+      filter: drop-shadow(0 6px 16px rgba(0,0,0,0.25));
+    }
+    .logo.big{
+      width: 22px;
+      height: 22px;
+      vertical-align: -4px;
+      margin-right: 10px;
+    }
+    .contact-icon{
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      vertical-align: -3px;
+      margin-right: 8px;
+      filter: drop-shadow(0 6px 16px rgba(0,0,0,0.25));
+    }
+    .cert-icon{
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      vertical-align: -3px;
+      margin-right: 8px;
+      filter: drop-shadow(0 6px 16px rgba(0,0,0,0.25));
+    }
+
     @media (min-width: 860px){
       .grid{ grid-template-columns: 1fr 1fr; }
-      .avatar{ width: 118px; height: 118px; }
+      .avatar{ width: 124px; height: 124px; }
     }
   </style>
 </head>
@@ -237,7 +289,7 @@
         <div><span class="prompt">jacob@ceranski:~$</span> whoami</div>
 
         <div class="hero">
-          <!-- If your image still doesn’t show: rename it to portrait.jpg and change src="portrait.jpg" -->
+          <!-- Your repo shows: GRADUATION PORTRAIT.jpg -->
           <img class="avatar" src="GRADUATION%20PORTRAIT.jpg" alt="Portrait of Jacob Ceranski" />
           <div>
             <h1>Jacob Ceranski</h1>
@@ -252,6 +304,7 @@
               <li><a href="#about">About</a></li>
               <li><a href="#experience">Experience</a></li>
               <li><a href="#education">Education</a></li>
+              <li><a href="#organizations">Organizations</a></li>
               <li><a href="#certifications">Certifications</a></li>
               <li><a href="#honors">Honors & Awards</a></li>
               <li><a href="#skills">Skills & Tools</a></li>
@@ -259,11 +312,17 @@
             </ul>
 
             <p class="subline">
-              <a href="https://www.linkedin.com/in/jacobceranski" target="_blank" rel="noreferrer">LinkedIn</a>
-              &nbsp;•&nbsp;
-              <a href="mailto:jacobceranski@gmail.com">Email</a>
-              &nbsp;•&nbsp;
-              <a href="Resume%20-%20Jacob%20Ceranski.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+              <a class="btn" href="https://www.linkedin.com/in/jacobceranski" target="_blank" rel="noreferrer">
+                <img class="contact-icon" src="linkedin.png" alt="" />LinkedIn
+              </a>
+              &nbsp;
+              <a class="btn" href="mailto:jacobceranski@gmail.com">
+                <img class="contact-icon" src="gmail.jpg" alt="" />Email
+              </a>
+              &nbsp;
+              <a class="btn" href="Resume%20-%20Jacob%20Ceranski.pdf" target="_blank" rel="noreferrer">
+                <img class="contact-icon" src="resume.jpg" alt="" />Resume (PDF)
+              </a>
             </p>
           </div>
         </div>
@@ -273,6 +332,8 @@
           <h2>About</h2>
           <div class="card">
             <p style="margin:0;">
+              I built this portfolio as a hands-on HTML/CSS project to practice web fundamentals while presenting my background in IT and cyber defense. I’ll continue improving the site over time as I complete new training and add technical projects and write-ups.
+              <br><br>
               Hello everyone! I am Jacob Ceranski, a University at Buffalo School of Management undergraduate student majoring in Information Technology and Management. Apart from academics, I also serve in the United States Air National Guard as a Technical Support Specialist. CompTIA Security+ Certified!
               <br><br>
               Outside of school, I work in the hospitality industry at Falleta's, a high-end Italian restaurant, where I've honed my teamwork, communication, and adaptability under high-pressure situations.
@@ -284,11 +345,11 @@
 
         <div class="section" id="experience">
           <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat experience.md</div>
-          <h2>Experience</h2>
+          <h2>Cyber & IT Experience</h2>
 
           <div class="card">
             <div class="row">
-              <strong>Technical Support Specialist</strong>
+              <strong><img class="logo big" src="af.jpg" alt="US Air Force" />Technical Support Specialist</strong>
               <span class="meta">United States Air Force (Contract) • Jul 2025 – Present</span>
             </div>
             <div class="meta">107th Attack Wing • On-site</div>
@@ -310,14 +371,24 @@
 
           <div class="card">
             <div class="row">
-              <strong>University at Buffalo</strong>
+              <strong><img class="logo big" src="ub.jpg" alt="University at Buffalo" />University at Buffalo</strong>
               <span class="meta">2023 – 2028</span>
             </div>
             <div class="meta">Bachelor of Science (BS) — Computer/Information Technology Administration and Management</div>
             <div class="meta">Grade: Junior</div>
-            <p class="meta" style="margin:10px 0 0;">
-              Activities and societies: National Student Data Corps at UB • Association for Computing Machinery • Pi-Rho Zeta Chapter of Lambda Chi Alpha
-            </p>
+          </div>
+        </div>
+
+        <div class="section" id="organizations">
+          <div class="muted"><span class="prompt">jacob@ceranski:~$</span> cat organizations.md</div>
+          <h2>Organizations</h2>
+
+          <div class="card">
+            <ul style="margin-top:0;">
+              <li>National Student Data Corps at UB</li>
+              <li>Association for Computing Machinery (ACM)</li>
+              <li>Lambda Chi Alpha — Pi-Rho Zeta Chapter</li>
+            </ul>
           </div>
         </div>
 
@@ -327,9 +398,14 @@
 
           <div class="grid">
             <div class="card">
-              <strong>CompTIA Security+ ce Certification</strong>
+              <strong><img class="cert-icon" src="comptia.png" alt="CompTIA" />CompTIA Security+ ce Certification</strong>
               <div class="meta">CompTIA</div>
               <div class="meta">Issued Jun 2026 • Expires Jun 2029</div>
+              <div style="margin-top:10px;">
+                <a class="btn" href="https://www.credly.com/badges/d706f969-94af-4ecb-9f71-46e69de57c47/linked_in_profile" target="_blank" rel="noreferrer">
+                  View credential (Credly)
+                </a>
+              </div>
             </div>
 
             <div class="card">
@@ -348,9 +424,9 @@
 
           <div class="card">
             <ul style="margin-top:0;">
-              <li><strong>The University of Buffalo Deans List</strong> — May 2025</li>
-              <li><strong>The University of Buffalo Deans List</strong> — Dec 2024</li>
-              <li><strong>The University of Buffalo Deans List</strong> — Dec 2023</li>
+              <li><img class="logo" src="ub.jpg" alt="UB" /><strong>The University of Buffalo Deans List</strong> — May 2025</li>
+              <li><img class="logo" src="ub.jpg" alt="UB" /><strong>The University of Buffalo Deans List</strong> — Dec 2024</li>
+              <li><img class="logo" src="ub.jpg" alt="UB" /><strong>The University of Buffalo Deans List</strong> — Dec 2023</li>
             </ul>
           </div>
         </div>
@@ -361,16 +437,17 @@
 
           <div class="grid">
             <div class="card">
-              <strong>Security fundamentals</strong>
+              <strong>Skills</strong>
               <ul>
-                <li>Security+, access control, authentication/authorization, least privilege</li>
+                <li>Technical support & troubleshooting (hardware/software/network)</li>
+                <li>Incident response fundamentals (triage, containment, documentation)</li>
+                <li>Security fundamentals (access control, least privilege, risk concepts)</li>
                 <li>Networking fundamentals (DNS, HTTP/S, ports/protocols)</li>
-                <li>Incident response basics (triage, containment, documentation)</li>
               </ul>
             </div>
 
             <div class="card">
-              <strong>Security tools (core categories)</strong>
+              <strong>Tools & security categories</strong>
               <ul>
                 <li>SIEM (Security Information and Event Management)</li>
                 <li>EDR (Endpoint Detection & Response)</li>
@@ -388,9 +465,9 @@
 
           <div class="card">
             <ul style="margin-top:0;">
-              <li><strong>Email:</strong> <a href="mailto:jacobceranski@gmail.com">jacobceranski@gmail.com</a></li>
-              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jacobceranski" target="_blank" rel="noreferrer">linkedin.com/in/jacobceranski</a></li>
-              <li><strong>Resume:</strong> <a href="Resume%20-%20Jacob%20Ceranski.pdf" target="_blank" rel="noreferrer">Resume - Jacob Ceranski (PDF)</a></li>
+              <li><img class="contact-icon" src="gmail.jpg" alt="" /><strong>Email:</strong> <a href="mailto:jacobceranski@gmail.com">jacobceranski@gmail.com</a></li>
+              <li><img class="contact-icon" src="linkedin.png" alt="" /><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jacobceranski" target="_blank" rel="noreferrer">linkedin.com/in/jacobceranski</a></li>
+              <li><img class="contact-icon" src="resume.jpg" alt="" /><strong>Resume:</strong> <a href="Resume%20-%20Jacob%20Ceranski.pdf" target="_blank" rel="noreferrer">Resume - Jacob Ceranski (PDF)</a></li>
             </ul>
           </div>
         </div>
