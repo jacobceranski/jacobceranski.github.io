@@ -6,9 +6,15 @@
 
   <title>Jacob Ceranski | Aspiring SOC Analyst</title>
 
-  <meta name="description" content="Jacob Ceranski — Aspiring SOC Analyst. Technical Support Specialist (USAF National Guard). CompTIA Security+ certified." />
+  <meta
+    name="description"
+    content="Jacob Ceranski — Aspiring SOC Analyst. Technical Support Specialist (USAF National Guard). CompTIA Security+ certified."
+  />
   <meta property="og:title" content="Jacob Ceranski | Aspiring SOC Analyst" />
-  <meta property="og:description" content="About, Projects, Cyber & IT Experience, Education, Organizations, Certifications, Honors & Awards, Skills/Tools, and Contact." />
+  <meta
+    property="og:description"
+    content="About, Projects, Cyber & IT Experience, Education, Organizations, Certifications, Honors & Awards, Skills/Tools, and Contact."
+  />
   <meta property="og:type" content="website" />
 
   <style>
@@ -200,10 +206,13 @@
       padding: 12px 12px;
     }
 
+    /* Make sections align left and remove “right-shift” */
     .grid{
       display:grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* always single-column so cards aren’t pushed right */
       gap: 10px;
+      justify-items: start; /* left-align grid items */
+      align-items: start;
     }
 
     .row{
@@ -259,11 +268,6 @@
       margin-right: 8px;
       filter: drop-shadow(0 6px 16px rgba(0,0,0,0.25));
     }
-
-    @media (min-width: 860px){
-      .grid{ grid-template-columns: 1fr 1fr; }
-      .avatar{ width: 124px; height: 124px; }
-    }
   </style>
 </head>
 
@@ -316,7 +320,6 @@
                 <img class="contact-icon" src="linkedin.png" alt="" />LinkedIn
               </a>
               &nbsp;
-
               <a class="btn" href="mailto:jacobceranski@gmail.com">
                 <img class="contact-icon" src="gmail.jpg" alt="" />Email
               </a>
@@ -325,17 +328,16 @@
         </div>
 
         <div class="section" id="about">
-          <div class="muted"><span class="prompt">jacob@ceranski:~`$</span> cat about.txt</div><br>
-          <h2>About</h2><br>
-          <div class="card"><br>
-            <p style="margin:0;"><br>
+          <div class="muted"><span class="prompt">jacob@ceranski:~`$</span> cat about.txt</div>
+          <h2>About</h2>
+          <div class="card">
+            <p style="margin:0;">
               I built this portfolio as a hands-on HTML/CSS project to practice web fundamentals while presenting my background in IT and cyber defense.
-              I’ll continue improving the site over time as I complete new training and add technical projects and write-ups.<br>
-            </p><br>
-          </div><br>
+              I’ll continue improving the site over time as I complete new training and add technical projects and write-ups.
+            </p>
+          </div>
         </div>
 
-        <!-- NEW: PROJECTS -->
         <div class="section" id="projects">
           <div class="muted"><span class="prompt">jacob@ceranski:~`$</span> ls projects/</div>
           <h2>Projects</h2>
@@ -344,20 +346,26 @@
             <div class="card">
               <div class="row">
                 <strong>Signal Triage — Auth Log Analyzer</strong>
-                <span class="meta">Python • SOC Triage • Detection Engineering</span>
+                <span class="meta">Python • CLI • Alert Enrichment</span>
               </div>
 
               <p class="meta" style="margin:10px 0 0;">
-                Built a Python SOC-style authentication log analyzer for SSO/VPN login events. Signal Triage detects brute force attempts,
-                password spraying, success-after-failure patterns, new IP usage, impossible travel, and suspicious geography.
-                The tool accepts JSONL, JSON, and CSV authentication logs and generates three outputs: a Markdown investigation report,
-                structured JSON alerts, and spreadsheet-friendly CSV alerts. This project demonstrates detection engineering fundamentals,
-                authentication log analysis, Python CLI development, alert enrichment, and SOC-style reporting.
+                Built a Python SOC-style authentication log analyzer for SSO/VPN login events.
+              </p>
+
+              <ul class="meta" style="margin-top:8px;">
+                <li>Detects brute force attempts, password spraying, success-after-failure, new IP usage, impossible travel, and suspicious geography.</li>
+                <li>Accepts JSONL, JSON, and CSV authentication logs.</li>
+                <li>Generates three outputs: a Markdown investigation report, structured JSON alerts, and spreadsheet-friendly CSV alerts.</li>
+              </ul>
+
+              <p class="meta" style="margin:10px 0 0;">
+                This project demonstrates detection engineering fundamentals, authentication log analysis, Python CLI development, alert enrichment, and SOC-style reporting.
               </p>
 
               <div style="margin-top:10px;">
                 <a class="btn" href="https://github.com/jacobceranski/signal-triage" target="_blank" rel="noreferrer">
-                  <img class="contact-icon" src="github.png" alt="" />GitHub Repo
+                  GitHub Repo
                 </a>
                 &nbsp;
                 <a class="btn" href="https://github.com/jacobceranski/signal-triage#readme" target="_blank" rel="noreferrer">
@@ -380,10 +388,7 @@
             <div class="meta">107th Attack Wing • On-site</div>
 
             <p class="meta" style="margin:10px 0 0;">
-              Enlisted in the United States Air Force (Air National Guard) as a Cyber Defense Operations Specialist (AFSC 1D7X1). As a Technical
-              Support Specialist, I ensure the security of critical digital infrastructure while providing essential technical support to personnel.
-              I integrate strict DoD information assurance standards into daily operations, managing endpoint configuration, provisioning devices,
-              and maintaining situational awareness within the cybersecurity landscape.
+              Enlisted in the United States Air Force (Air National Guard) as a Cyber Defense Operations Specialist (AFSC 1D7X1). As a Technical Support Specialist, I ensure the security of critical digital infrastructure while providing essential technical support to personnel. I integrate strict DoD information assurance standards into daily operations, managing endpoint configuration, provisioning devices, and maintaining situational awareness within the cybersecurity landscape.
             </p>
 
             <ul>
@@ -394,17 +399,17 @@
         </div>
 
         <div class="section" id="education">
-          <div class="muted"><span class="prompt">jacob@ceranski:~`$</span> cat education.json</div><br>
-          <h2>Education</h2><br><br>
+          <div class="muted"><span class="prompt">jacob@ceranski:~`$</span> cat education.json</div>
+          <h2>Education</h2>
 
-          <div class="card"><br>
-            <div class="row"><br>
-              <strong><img class="logo big" src="ub.jpg" alt="University at Buffalo" />University at Buffalo</strong><br>
-              <span class="meta">2023 – 2028</span><br>
-            </div><br>
-            <div class="meta">Bachelor of Science (BS) — Computer/Information Technology Administration and Management</div><br>
-            <div class="meta">Grade: Junior</div><br>
-          </div><br>
+          <div class="card">
+            <div class="row">
+              <strong><img class="logo big" src="ub.jpg" alt="University at Buffalo" />University at Buffalo</strong>
+              <span class="meta">2023 – 2028</span>
+            </div>
+            <div class="meta">Bachelor of Science (BS) — Computer/Information Technology Administration and Management</div>
+            <div class="meta">Grade: Junior</div>
+          </div>
         </div>
 
         <div class="section" id="organizations">
@@ -421,29 +426,29 @@
         </div>
 
         <div class="section" id="certifications">
-          <div class="muted"><span class="prompt">jacob@ceranski:~`$</span> cat certifications.json</div><br>
-          <h2>Certifications</h2><br><br>
+          <div class="muted"><span class="prompt">jacob@ceranski:~`$</span> cat certifications.json</div>
+          <h2>Certifications</h2>
 
-          <div class="grid"><br>
-            <div class="card"><br>
-              <strong><img class="cert-icon" src="comptia.png" alt="CompTIA" />CompTIA Security+ ce Certification</strong><br>
-              <div class="meta">CompTIA</div><br>
-              <div class="meta">Issued Jun 2026 • Expires Jun 2029</div><br>
-              <div style="margin-top:10px;"><br>
-                <a class="btn" href="https://www.credly.com/badges/d706f969-94af-4ecb-9f71-46e69de57c47/linked_in_profile" target="_blank" rel="noreferrer"><br>
-                  View credential (Credly)<br>
-                </a><br>
-              </div><br>
-            </div><br><br>
+          <div class="grid">
+            <div class="card">
+              <strong><img class="cert-icon" src="comptia.png" alt="CompTIA" />CompTIA Security+ ce Certification</strong>
+              <div class="meta">CompTIA</div>
+              <div class="meta">Issued Jun 2026 • Expires Jun 2029</div>
+              <div style="margin-top:10px;">
+                <a class="btn" href="https://www.credly.com/badges/d706f969-94af-4ecb-9f71-46e69de57c47/linked_in_profile" target="_blank" rel="noreferrer">
+                  View credential (Credly)
+                </a>
+              </div>
+            </div>
 
-            <div class="card"><br>
-              <strong>Next certifications</strong><br>
-              <ul><br>
-                <li><img class="logo" src="comptia.png" alt="CompTIA" />CompTIA CySA+</li><br>
-                <li><img class="logo" src="cisco.png" alt="Cisco" />Cisco CCNA</li><br>
-              </ul><br>
-            </div><br>
-          </div><br>
+            <div class="card">
+              <strong>Next certifications</strong>
+              <ul>
+                <li><img class="logo" src="comptia.png" alt="CompTIA" />CompTIA CySA+</li>
+                <li><img class="logo" src="cisco.png" alt="Cisco" />Cisco CCNA</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div class="section" id="honors">
@@ -460,31 +465,31 @@
         </div>
 
         <div class="section" id="skills">
-          <div class="muted"><span class="prompt">jacob@ceranski:~`$</span> cat skills_and_tools.txt</div><br>
-          <h2>Skills & Tools</h2><br><br>
+          <div class="muted"><span class="prompt">jacob@ceranski:~`$</span> cat skills_and_tools.txt</div>
+          <h2>Skills & Tools</h2>
 
-          <div class="grid"><br>
-            <div class="card"><br>
-              <strong>Skills</strong><br>
-              <ul><br>
-                <li>Technical support & troubleshooting (hardware/software/network)</li><br>
-                <li>Incident response fundamentals (triage, containment, documentation)</li><br>
-                <li>Security fundamentals (access control, least privilege, risk concepts)</li><br>
-                <li>Networking fundamentals (DNS, HTTP/S, ports/protocols)</li><br>
-              </ul><br>
-            </div><br><br>
+          <div class="grid">
+            <div class="card">
+              <strong>Skills</strong>
+              <ul>
+                <li>Technical support & troubleshooting (hardware/software/network)</li>
+                <li>Incident response fundamentals (triage, containment, documentation)</li>
+                <li>Security fundamentals (access control, least privilege, risk concepts)</li>
+                <li>Networking fundamentals (DNS, HTTP/S, ports/protocols)</li>
+              </ul>
+            </div>
 
-            <div class="card"><br>
-              <strong>Tools & security categories</strong><br>
-              <ul><br>
-                <li>SIEM (Security Information and Event Management)</li><br>
-                <li>EDR (Endpoint Detection & Response)</li><br>
-                <li>Log analysis & alert triage</li><br>
-                <li>Vulnerability management</li><br>
-                <li>Ticketing systems & incident documentation</li><br>
-              </ul><br>
-            </div><br>
-          </div><br>
+            <div class="card">
+              <strong>Tools & security categories</strong>
+              <ul>
+                <li>SIEM (Security Information and Event Management)</li>
+                <li>EDR (Endpoint Detection & Response)</li>
+                <li>Log analysis & alert triage</li>
+                <li>Vulnerability management</li>
+                <li>Ticketing systems & incident documentation</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div class="section" id="contact">
@@ -509,8 +514,8 @@
         </div>
 
         <div class="footer">
-          <div><span class="prompt">jacob@ceranski:~`$</span> exit</div><br>
-          <div class="muted">Last updated: <span id="lastUpdated"></span></div><br>
+          <div><span class="prompt">jacob@ceranski:~`$</span> exit</div>
+          <div class="muted">Last updated: <span id="lastUpdated"></span></div>
         </div>
       </div>
     </div>
